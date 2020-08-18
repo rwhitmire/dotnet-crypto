@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Symmetric";
+}
+
+<div>
+    <form method="post">
+        <div class="wrapper">
+            <div class="box">Plaintext:</div>
+            <div class="box"><input name="PlainText" value="@Model.PlainText" style="width:348px" /></div>
+            <div class="box"><input type="submit" asp-page-handler="Encrypt" value="Encrypt" /></div>
+        </div>
+        <p></p>
+
+        <div class="wrapper altRow">
+            <div class="box">Ciphertext:</div>
+            <div class="box"><textarea name="CipherText" rows="2" cols="20" style="height:88px;width:346px;">@Model.CipherText</textarea></div>
+            <div class="box"><input type="submit" asp-page-handler="Decrypt" value="Decrypt" /></div>
+        </div>
+        <div class="wrapper altRow">
+            <div class="box">IV</div>
+            <div class="box"><input name="IV" value="@Model.IV" style="width:348px" /></div>
+        </div>
+        <p></p>
+
+        <div class="wrapper">
+            <div class="box">Plaintext:</div>
+            <div class="box"><input name="OriginalClearText" value="@Model.OriginalPlainText" /></div>
+            <div class="box">&nbsp;</div>
+        </div>
+    </form>
+</div>

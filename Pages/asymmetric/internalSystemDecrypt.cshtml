@@ -1,0 +1,20 @@
+﻿@page
+@model CryptographyCore.Pages.asymmetric.internalSystemDecryptModel
+@{
+    ViewData["Title"] = "internalSystemDecrypt";
+}
+
+<form method="post">
+    <div class="wrapper altRow">
+        <div class="box">Ciphertext:</div>
+        <div class="box"><textarea name="CipherText" rows="2" cols="20" style="height:88px;width:346px;">@Model.CipherText</textarea></div>
+        <div class="box"><input type="submit" asp-page-handler="Decrypt" value="Decrypt" /></div>
+    </div>
+    <p></p>
+
+    <div class="wrapper">
+        <div class="box">Plaintext:</div>
+        <div class="box"><input name="OriginalClearText" value="@Model.OriginalClearText" /></div>
+        <div class="box">&nbsp;</div>
+    </div>
+</form>

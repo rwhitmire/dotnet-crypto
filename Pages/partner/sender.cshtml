@@ -1,0 +1,8 @@
+﻿@page
+@model CryptographyCore.Pages.partner.senderModel
+@{
+    ViewData["Title"] = "sender";
+}
+
+<a href="/partner/receiver?secret=@Model.cipherText&signature=@Model.signatureText">Receiver</a>
+

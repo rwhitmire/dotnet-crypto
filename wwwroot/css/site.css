@@ -1,0 +1,16 @@
+﻿.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 125px 400px 100px;
+    background-color: #fff;
+    color: #444;
+    width: 650px;
+}
+
+.altRow {
+    background-color:lightgrey;
+}
+
+.box {
+    padding: 20px;
+}
